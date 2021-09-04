@@ -1,0 +1,46 @@
+.work__section {
+    background-color: $background-color;
+    padding-bottom: 94px;
+
+@media screen and (max-width: 1199px) {
+    display: none;
+}   
+}
+
+.work__list {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 0;
+    
+}
+
+.work__item +  .work__item {
+    margin-left: 30px;
+}
+
+.work__thumb {
+     position: relative;
+}
+
+.work__label {
+    position: absolute;
+    @include centeredFlex($fd: column);
+    width: 370px;
+    height: 70px;
+    background: $label-background;
+
+    transform: translateY(calc(-100%));
+}
+
+.work__text {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: $text-align;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: $background-color;
+
+}
+

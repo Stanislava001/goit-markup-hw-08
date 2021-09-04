@@ -1,0 +1,201 @@
+.filter__section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: $background-color;
+
+@media screen and (min-width: 1200px) {
+    @include sectionPaddings();
+}   
+}
+
+.btn__set {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+
+@media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 30px;
+    
+}
+
+@media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+    @include centeredFlex();
+    
+}}
+
+
+@media screen and (max-width: 767px) {
+    .btn__link {
+    margin-bottom: 15px;
+
+    &:not(:last-child) {
+        margin-right: 8px;
+}}}
+
+.btn__link {
+
+@media screen and (min-width: 768px) {
+    
+    &:not(:first-child) {
+    margin-left: 8px;
+}
+}
+
+@media screen and (min-width: 1200px) {
+    &:not(:first-child) {
+    margin-left: 8px;
+}
+}}
+
+.button--secondary {
+    @include button();
+    background-color: $team-section-color;
+    
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.63;
+    letter-spacing: 0.03em;
+    color: inherit;
+    
+    padding: 6px 22px; 
+    border: 1px solid transparent;
+    border-color: $team-section-color;
+    box-shadow: none;
+
+    transition-property: background-color, color, border-color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover, &:focus {
+    background-color: $accent-color;
+    color: $background-color;
+    border-color: $accent-color;
+    box-shadow: $btn-secondary-shadow;
+}}
+
+.button--secondary-all {
+    background-color: $accent-color;
+    font-family: $font-family;
+    font-style: $font-style;
+        
+    color: $background-color;
+    
+    border-color: $accent-color;
+    box-shadow: $btn-secondary-shadow;
+
+}
+
+.card-set {
+
+@media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: -30px;
+    margin-left: calc( -1 * 30px);
+}   
+}
+
+
+@media screen and (max-width: 767px) {
+    .card-set__item {
+        width: 100%;
+
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }}
+}
+
+
+.card-set__item {
+
+@media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 60px) / 2);
+    margin-left: 30px;
+    margin-top: 30px;
+    }
+
+@media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 90px) / 3);
+    margin-left: $card-set-gap;
+    margin-top: $card-set-gap;
+    
+}  
+}
+
+
+.card {
+    border: 1px solid $card-border;
+    box-sizing: border-box;
+}
+
+.card__content {
+    padding: 20px 24px;
+}
+
+.filter__link {
+    display: block;
+    text-decoration: none;
+
+    @include transition(box-shadow);
+    
+    &:hover, &:focus {
+    box-shadow: $card-item-shadow;}
+}
+
+.card__title {
+    margin-bottom: 4px;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: $primary-color;
+}
+
+.card__text {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.03em;
+    color: $text-color;
+}
+
+.card__thumb {
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 294px;
+
+    margin: 0;
+    padding: 63px 24px;
+    border: none;
+    background: $overlay-background;
+    
+    @include transition(opacity);
+    @include transition(transform);
+
+    }
+
+    .filter__link:hover .overlay, 
+    .filter__link:focus .overlay {
+    opacity: 1;
+    transform: translateY(-100%);
+}
+
+
+.overlay__text {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+
+    color: $background-color;
+}

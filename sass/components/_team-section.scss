@@ -1,0 +1,134 @@
+.team__section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: $team-section-color;
+
+@media screen and (min-width: 1200px) {
+   @include sectionPaddings();
+    }      
+}
+
+.team__list {
+    list-style-type: none;
+
+@media screen and (min-width: 768px) {
+    padding: 0;
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    margin-top: -30px;
+    margin-left: -30px;
+}
+
+@media screen and (min-width: 1200px) {
+    padding: 0;
+    display: flex;
+    flex-direction: row; 
+} 
+}
+
+.team__card {
+    background-color: $background-color;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: $text-align;
+    box-shadow: $team-item-shadow;
+    border-radius: 0px 0px 4px 4px;
+
+@media screen and (max-width: 767px) {
+    width: 100%;
+
+    &:not(:last-child) {
+    margin-bottom: 30px;
+}}
+
+@media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 60px) / 2);
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 120px) / 4);
+    margin-top: 30px;
+    margin-left: 30px;
+
+    & + & {
+    margin-left: 30px;
+}
+}
+}
+
+.team__content {
+    padding-top: 30px;
+    padding-bottom: 24px;
+    padding-left: auto;
+    padding-right: auto;
+
+@media screen and (min-width: 1200px) {
+    padding-bottom: 30px;
+}
+}
+
+.team__name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: inherit;
+    margin-bottom: 10px;  
+    
+}
+
+.team__specialty {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: $text-color;
+    margin-bottom: 16px;
+}
+
+.social__list {
+    padding: 0;
+    @include centeredFlex();
+    flex-basis: calc((100% - 30) / 4);
+  }
+
+.social__item + .social__item {
+    margin-left: 10px;
+   
+}
+
+.social__link {
+    @include centeredFlex();
+    
+    width: 44px; 
+    height: 44px;
+    border-radius: 50%;
+    color: $background-color;
+
+    @include transition(background-color);
+    
+@media screen and (min-width: 1200px) {
+    &:hover, &:focus {
+        background-color: $accent-color;
+    }
+
+    &:hover .social__icon,
+    &:focus .social__icon {
+    fill: currentColor;
+}
+}
+    
+}
+  
+.social__icon,
+.clients__icon {
+    fill: $icon-color;
+}
+
+.social__link .social__icon {
+    @include transition(fill);
+}
+

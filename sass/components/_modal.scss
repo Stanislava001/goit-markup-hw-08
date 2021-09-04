@@ -1,0 +1,228 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: $backdrop-background;
+    
+    transform: scale(1);
+    @include transition(opacity);
+    @include transition(transform);
+
+    &.is-hidden {
+    opacity: 0;
+    transform: scale(0);
+    pointer-events: none;
+}}
+
+.modal {
+    position: absolute;
+    padding: 40px;
+    width: 450px;
+    height: 609px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: $background-color;
+    box-shadow:  $modal-box-shadow;
+    border-radius: $border-radius;
+
+@media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;  
+    }
+}
+
+.modal__close-button {
+    @include centeredFlex();
+
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    margin-top: -32px;
+    margin-right: -32px;
+    margin-left: auto;
+    cursor: $cursor;
+
+    background-color: $background-color;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    
+    &:hover, &:focus {
+    fill: $accent-color;   
+}   
+}  
+
+.modal__title {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 12px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1,15;
+    text-align: $text-align;
+    letter-spacing: 0.03em;
+
+    color: $primary-color;
+}
+
+.modal__form-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    color: $accent-color;
+
+    &:hover .modal__input,
+    &:focus .modal__input,
+    &:hover textarea,
+    &:focus textarea {
+    border-color: $accent-color;
+}
+}
+
+.modal__form-field .modal__label {
+    margin-bottom: 4px;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 1,17;
+    letter-spacing: 0.01em;
+    cursor: $cursor;
+    color: $text-color;
+}
+
+.modal__form-field .modal__input {
+    position: relative;
+    padding: 12px 42px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: $border-radius;
+    color: $primary-color;
+    cursor: $cursor;
+
+    @include transition(border-color);
+}
+
+.modal__icon {
+    position: absolute;
+    transform: translate(12px, 30px);
+    fill: $primary-color;
+    color: $accent-color;
+
+    @include transition(fill);
+    
+}
+
+.modal__form-field:hover > .modal__icon,
+.modal__form-field:focus > .modal__icon {
+    fill: currentColor;
+}
+
+.modal__form-field .modal__textarea {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 20px;
+    padding: 12px 16px;
+    
+    resize: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: $border-radius;
+    cursor: $cursor;
+
+    @include transition(border-color);
+}
+
+textarea::placeholder { 
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.14px;
+    letter-spacing: 0.01em;
+
+    color: $textareaPlaceholder;
+
+@media screen and (min-width: 1200px) {
+    font-size: 12px;
+    line-height: 1,17;
+}
+}
+ 
+.form__checkbox {
+    margin-bottom: 30px;
+
+@media screen and (min-width: 1200px) {
+    @include centeredFlex();
+}
+}
+
+.checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip:rect(0 0 0 0);
+    overflow: hidden;
+
+    &:checked + .checkbox__icon {
+    background-image: url('../image/checkbox-icon.svg');
+    background-size: contain;
+    background-origin: content-box;
+    border: none;
+}}
+
+.agreement {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkbox__icon {
+    display: inline-block;
+    margin-right: 8px;
+    width: 16px;
+    height: 15px;
+    border: 2px solid $primary-color;
+    border-radius: 2px;
+    cursor: $cursor;
+}
+
+.checkbox__text {
+    display: inline-block;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    cursor: $cursor;
+    color: $text-color;
+
+@media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+}
+}
+
+.checkbox__agreement {
+    color: $accent-color;
+}
+
+.modal__button {
+    @include centeredFlex();
+    
+    width: 200px;
+    height: 50px;
+    padding: 10px 56px;
+    margin: 0 auto;
+
+    border: none;
+    cursor: $cursor;
+
+    @include transition(background-color);
+    @include transition(box-shadow);
+   
+    &:hover {
+    background-color: $btn-primary-hover;
+    box-shadow: $btn-primary-shadow;
+}
+}

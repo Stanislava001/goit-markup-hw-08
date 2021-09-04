@@ -1,0 +1,31 @@
+@mixin sectionPaddings($ptop: 94px, $pbottom: 94px) {
+    padding-top: $ptop;
+    padding-bottom: $pbottom;
+}
+
+@mixin centeredFlex($fd: row, $jc: center, $ai: center) {
+    display: flex;
+    flex-direction: $fd; 
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin backgroundHero() {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+} 
+
+@mixin transition($property) {
+    transition-property: $property;
+    transition-duration: $animation-time;
+    transition-timing-function: $cubic-bezier; 
+}
+
+@mixin button() {
+    font-family: $font-family;
+    font-style: $font-style;
+    border-radius: $border-radius;
+    text-align: $text-align;
+    cursor: $cursor;
+}
