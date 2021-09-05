@@ -20,18 +20,22 @@
     <header class="header__border-bottom">
       <div class="container">
         <div class="header__section">
-           <a href="./index.html" class="logo header__logo"
-                  >Web<span class="logo__item--black">Studio</span></a
-                >
+          <a href="./index.html" class="logo header__logo"
+            >Web<span class="logo__item--black">Studio</span></a
+          >
+          <button class="menu__toggle burger js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+            <svg class="menu__toggle-burger" width="40" height="40">
+              <use href="./image/symbol-defs.svg#mobile-menu-burger"></use>
+            </svg>
+          </button>
 
-          <div class="navigation">
-              <nav class="nav">
+          <nav class="nav">
                  <ul class="list nav__list ">
                   <li class="nav__item">
-                    <a href="./index.html" class="nav__link nav__link--current">Студия</a>
+                    <a href="./index.html" class="nav__link">Студия</a>
                   </li>
                   <li class="nav__item">
-                    <a href="./portfolio.html" class="nav__link">Портфолио</a>
+                    <a href="./portfolio.html" class="nav__link nav__link--current">Портфолио</a>
                   </li>
                   <li class="nav__item">
                     <a href="" class="nav__link">Контакты</a>
@@ -39,15 +43,15 @@
                 </ul>
               </nav>
 
-              <div class="nav__contacts">
+          <div class="nav__contacts">
                 <ul class="list">
-                  <li class="nav__item">
+                  <li class="nav__contacts-item">
                     <a href="mailto:info@devstudio.com" class="nav__link--grey"
                       >
                       <svg class="nav__contact-icon" width="16" height="12"><use href="./image/symbol-defs.svg#icon-nav-envelope"></use></svg>info@devstudio.com</a
                     >
                   </li>
-                  <li class="nav__item">
+                  <li class="nav__contacts-item">
                     <a href="tel:+380961111111" class="nav__link--grey"
                       >
                       <svg class="nav__contact-icon" width="10" height="16"><use href="./image/symbol-defs.svg#icon-nav-smartphone"></use></svg>
@@ -56,13 +60,23 @@
                   </li>
                 </ul>
               </div>
-          </div>  
-          
-          <button class="menu__toggle burger js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
-                <svg class="menu__toggle-burger" width="40" height="40">
-                  <use href="./image/symbol-defs.svg#mobile-menu-burger"></use>
-                </svg>
-          </button>
+          <div class="nav__contacts-desktop">
+                <ul class="contacts-desktop list">
+                  <li class="nav__desktop-item">
+                    <a href="mailto:info@devstudio.com" class="nav__link-desktop"
+                      >
+                      <svg class="nav__contact-icon" width="16" height="12"><use href="./image/symbol-defs.svg#icon-nav-envelope"></use></svg>info@devstudio.com</a
+                    >
+                  </li>
+                  <li class="nav__desktop-item">
+                    <a href="tel:+380961111111" class="nav__link-desktop"
+                      >
+                      <svg class="nav__contact-icon" width="10" height="16"><use href="./image/symbol-defs.svg#icon-nav-smartphone"></use></svg>
+                      +38 096 111 11 11</a
+                    >
+                  </li>
+                </ul>
+              </div>
         </div>
       </div>
     </header>
@@ -312,16 +326,17 @@
       </section>
     </main>
 
-    <!-- <footer class="footer__section">
+    <footer class="footer__section">
       <div class="container">
         
-       <div class="footer__box">
-          <div >
+       <div class="footer__box--general">
+         <div class="footer__two-boxes">
+          <div class="footer__address-box">
               <a href="./index.html" class="logo footer__logo"
               >Web<span class="logo__item--white">Studio</span></a
             >
-            <address class="adress">
-              <ul class="list">
+            <address class="address">
+              <ul class="list address__list">
                 <li class="address__list address__place">г. Киев, пр-т Леси Украинки, 26</li>
                 <li class="address__list">
                   <a href="mailto:info@example.com" class="address__link"
@@ -336,7 +351,8 @@
               </ul>
             </address>
             </div>
-           <div class="join__box">
+
+          <div class="join__box">
                 <strong class="join__title">присоединяйтесь</strong>
                 <ul class="list footer-social__list">
                   <li class="footer-social__item" >
@@ -365,11 +381,12 @@
                     </svg></a></li>
                 </ul>
             </div>
+          </div>
 
-            <div class="newsletter__box">
+          <div class="newsletter__box">
               <strong class="newsletter__title">Подпишитесь на рассылку</strong>
               <form class="newsletter__form">
-                <input type="text" name="email" placeholder="Email" class="newsletter__input">
+                <input type="text" name="email" placeholder="E-mail" class="newsletter__input">
                 <button type="submit" class="form__button newsletter__button">
                   Подписаться
                   <svg width="24" height="24" class="newsletter__icon">
@@ -380,7 +397,8 @@
           </div>
         </div>
       </div>
-    </footer> -->
+
+    </footer>
   
     <div class="menu__container js-menu-container" id="mobile-menu">
       <button class="menu__toggle cross js-close-menu">
@@ -406,13 +424,13 @@
           <div class="mob-nav__contacts">
             <ul class="list ">
               <li class="mob-nav__item">
-                <a href="tel:+380961111111" class="mob-nav__link mob-nav__link-phone nav__link--grey"
+                <a href="tel:+380961111111" class="mob-nav__link mob-nav__link-phone"
                   >
                   +38 096 111 11 11</a
                 >
               </li>
               <li class="mob-nav__item">
-                <a href="mailto:info@devstudio.com" class="mob-nav__link mob-nav__link-mail nav__link--grey"
+                <a href="mailto:info@devstudio.com" class="mob-nav__link mob-nav__link-mail"
                   >
                   info@devstudio.com</a
                 >
@@ -421,11 +439,12 @@
           </div>
 
           <div class="mob-nav__socials">
-            <ul class="list"></ul>
+            <ul class="mob-nav__socials list">
               <li class="mob-nav__socials-item"><a href="#" class="mob-nav__socials-link">Instagram</a></li>
               <li class="mob-nav__socials-item"><a href="#" class="mob-nav__socials-link">Twitter</a></li>
               <li class="mob-nav__socials-item"><a href="#" class="mob-nav__socials-link">Facebook</a></li>
               <li class="mob-nav__socials-item"><a href="#" class="mob-nav__socials-link">LinkedIn</a></li> 
+            </ul> 
           </div> 
         </div>
       </div>
