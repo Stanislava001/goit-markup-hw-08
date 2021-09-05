@@ -83,6 +83,10 @@
     @include transition(color);
 }  
 
+.mob-nav__link--current {
+    color: $accent-color;
+}
+
 .mob-nav__contacts {
     margin-bottom: 64px;
 }

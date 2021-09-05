@@ -171,18 +171,22 @@
 
 .overlay {
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     width: 100%;
-    height: 294px;
+    height: 100%;
 
     margin: 0;
-    padding: 63px 24px;
+    padding-left: 24px;
+    padding-right: 24px;
     border: none;
     background: $overlay-background;
     
     @include transition(opacity);
     @include transition(transform);
-
-    }
+}
 
     .filter__link:hover .overlay, 
     .filter__link:focus .overlay {
@@ -196,6 +200,5 @@
     font-size: 18px;
     line-height: 1.56;
     letter-spacing: 0.03em;
-
     color: $background-color;
 }
