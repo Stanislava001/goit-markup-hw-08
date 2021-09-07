@@ -116,7 +116,7 @@
     flex-basis: calc((100% - 60px) / 2);
     margin-left: 30px;
     margin-top: 30px;
-    }
+}
 
 @media screen and (min-width: 1200px) {
     flex-basis: calc((100% - 90px) / 3);
@@ -126,6 +126,15 @@
 }  
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .card__grow {
+        display: flex;
+        height: 377px;
+    }
+    & > .filter__link {
+        flex-grow: 1;
+    }
+}
 
 .card {
     border: 1px solid $card-border;

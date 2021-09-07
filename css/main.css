@@ -280,7 +280,13 @@ body {
   color: #212121;
 }
 
-h1, h2, h3, h4, h5, p, ul {
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul {
   margin: 0;
 }
 
@@ -324,25 +330,20 @@ img {
 }
 
 .section__title {
+  margin-bottom: 30px;
   font-weight: 700;
+  font-size: 28px;
+  line-height: 1.18;
   letter-spacing: 0.03em;
   text-align: center;
   color: inherit;
 }
 
-@media screen and (max-width: 1199px) {
-  .section__title {
-    font-size: 28px;
-    line-height: 1.18;
-    margin-bottom: 30px;
-  }
-}
-
 @media screen and (min-width: 1200px) {
   .section__title {
+    margin-bottom: 50px;
     font-size: 36px;
     line-height: 1.17;
-    margin-bottom: 50px;
   }
 }
 
@@ -531,6 +532,14 @@ img {
   }
 }
 
+.nav__link--grey.top {
+  padding-top: 21px;
+}
+
+.nav__link--grey.bottom {
+  padding-bottom: 21px;
+}
+
 .nav__contact-icon {
   margin-right: 8px;
   fill: #757575;
@@ -621,7 +630,7 @@ img {
 }
 
 .logo {
-  font-family: "Roboto", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -924,8 +933,6 @@ img {
   width: 100%;
   height: 400px;
   max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
   border: 1px solid #000000;
   background-color: #2F303A;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), color-stop(rgba(47, 48, 58, 0.4)), color-stop(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../image/hero/hero-img-mobile.jpg);
@@ -946,7 +953,6 @@ img {
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .hero__section {
-    max-width: 767px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), color-stop(rgba(47, 48, 58, 0.4)), color-stop(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../image/hero/hero-img-tablet.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/hero/hero-img-tablet.jpg);
   }
@@ -961,7 +967,6 @@ img {
 
 @media screen and (min-width: 1200px) {
   .hero__section {
-    max-width: 1600px;
     height: 600px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), color-stop(rgba(47, 48, 58, 0.4)), color-stop(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../image/hero/hero-img-desktop.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/hero/hero-img-desktop.jpg);
@@ -1076,8 +1081,8 @@ img {
 .modal {
   position: absolute;
   padding: 40px;
-  width: 100%;
-  height: 100%;
+  max-width: 450px;
+  height: 609px;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -1086,6 +1091,12 @@ img {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 450px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1467,16 +1478,6 @@ textarea::placeholder {
   }
 }
 
-.section__title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
-  text-align: center;
-  color: inherit;
-  margin-bottom: 50px;
-}
-
 .title--visually-hidden {
   position: absolute;
   width: 1px;
@@ -1519,7 +1520,7 @@ textarea::placeholder {
   margin-bottom: 10px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) {
   .features__title {
     text-align: left;
   }
@@ -1683,16 +1684,7 @@ textarea::placeholder {
 }
 
 .team__content {
-  padding-top: 30px;
-  padding-bottom: 24px;
-  padding-left: 32px;
-  padding-right: 32px;
-}
-
-@media screen and (min-width: 1200px) {
-  .team__content {
-    padding-bottom: 30px;
-  }
+  padding: 30px 32px;
 }
 
 .team__name {
@@ -2054,6 +2046,20 @@ textarea::placeholder {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .card__grow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 377px;
+  }
+  > .filter__link {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+
 .card {
   border: 1px solid #EEEEEE;
   -webkit-box-sizing: border-box;
@@ -2196,12 +2202,21 @@ textarea::placeholder {
 
 @media screen and (min-width: 768px) {
   .footer__two-boxes {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
     margin-bottom: 60px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .footer__two-boxes {
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
     margin-bottom: 0;
   }
 }
@@ -2318,6 +2333,9 @@ textarea::placeholder {
 
 @media screen and (min-width: 768px) {
   .join__box {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-left: 165px;
     padding: 0;
     margin-bottom: 0;
@@ -2433,6 +2451,7 @@ textarea::placeholder {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
 }
 
 @media screen and (min-width: 1200px) {
@@ -2451,6 +2470,7 @@ textarea::placeholder {
 }
 
 .newsletter__input {
+  width: 100%;
   padding: 15px 16px;
   margin-bottom: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
