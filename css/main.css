@@ -735,13 +735,6 @@ img {
   border: none;
 }
 
-.menu__toggle:hover .menu__toggle-burger,
-.menu__toggle:focus .menu__toggle-burger,
-.menu__toggle:hover .menu__toggle-cross,
-.menu__toggle:focus .menu__toggle-cross {
-  fill: #2196f3;
-}
-
 @media screen and (min-width: 768px) {
   .menu__toggle {
     display: none;
@@ -772,6 +765,13 @@ img {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu__toggle:hover .menu__toggle-burger,
+.menu__toggle:focus .menu__toggle-burger,
+.menu__toggle:hover .menu__toggle-cross,
+.menu__toggle:focus .menu__toggle-cross {
+  fill: #2196f3;
 }
 
 .mob-nav__link {
@@ -930,7 +930,7 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%;
+  width: 100vw;
   height: 400px;
   max-width: 1600px;
   border: 1px solid #000000;
@@ -968,6 +968,8 @@ img {
 @media screen and (min-width: 1200px) {
   .hero__section {
     height: 600px;
+    margin-left: auto;
+    margin-right: auto;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), color-stop(rgba(47, 48, 58, 0.4)), color-stop(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../image/hero/hero-img-desktop.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/hero/hero-img-desktop.jpg);
   }

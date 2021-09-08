@@ -40,14 +40,9 @@
     
     background-color: $background-color;
     border: none;
-        
-    &:hover .menu__toggle-burger, 
-    &:focus .menu__toggle-burger,
-    &:hover .menu__toggle-cross,
-    &:focus .menu__toggle-cross {
-    fill: $accent-color;
+    
 }
-}
+
 
 @media screen and (min-width: 768px) {
     .menu__toggle {
@@ -65,14 +60,20 @@
     position: absolute;
     top: 10px;
     right: 15px;
-    
-     
+ 
 }
 
 .menu__toggle-cross {
     fill: $secondary-color;
     @include transition(fill);
     
+}
+
+.menu__toggle:hover .menu__toggle-burger, 
+.menu__toggle:focus .menu__toggle-burger,
+.menu__toggle:hover .menu__toggle-cross,
+.menu__toggle:focus .menu__toggle-cross {
+    fill: $accent-color;
 }
 
 .mob-nav__link {
